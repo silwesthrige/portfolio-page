@@ -17,7 +17,7 @@ export default function Hero() {
 
           <h1 className="hero-name">
             Silwesthrige<br />
-            <span className="name-accent">Vishwa Roshel</span>
+            <span className="name-accent">Vishwa Roshel Shan</span>
           </h1>
 
           <div className="hero-role">
@@ -58,7 +58,7 @@ export default function Hero() {
         <div className="hero-visual">
           <div className="avatar-ring">
             <div className="avatar-inner">
-              <span className="avatar-initials">VR</span>
+              <span className="avatar-initials">SVR</span>
             </div>
           </div>
           <div className="hero-stats">
