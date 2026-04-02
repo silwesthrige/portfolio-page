@@ -20,7 +20,7 @@ export default function About() {
               Whether it's crafting REST APIs with Spring Boot, designing database schemas, or architecting 
               full-stack solutions — I focus on building systems that are reliable, scalable, and clean.
               I'm currently seeking a <strong>Backend Engineer Internship</strong> to apply my skills and 
-              grow as a professional developer.
+              grow as a professional developer..
             </p>
 
             <div className="about-info">
