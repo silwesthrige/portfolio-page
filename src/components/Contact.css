@@ -8,49 +8,42 @@
 }
 
 .highlight {
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-}
-
-.contact-desc {
-  color: var(--text2);
-  font-size: 16px;
-  line-height: 1.75;
-  margin-bottom: 40px;
-}
-
-.contact-methods {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
 }
 
 .method-card {
   display: flex;
   align-items: center;
   gap: 16px;
-  padding: 16px 20px;
+  padding: 20px 24px;
   cursor: pointer;
+  background: rgba(21, 31, 47, 0.3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: var(--transition);
 }
 
-.method-card:hover { transform: translateX(4px); }
-
-.method-icon { font-size: 22px; }
+.method-card:hover { 
+  background: rgba(21, 31, 47, 0.5);
+  border-color: rgba(56, 189, 248, 0.3);
+  transform: translateX(4px);
+}
 
 .method-label {
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--text3);
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 
 .method-value {
   font-size: 14px;
-  font-weight: 500;
-  color: var(--text);
+  font-weight: 600;
+  color: var(--accent);
 }
 
 /* Form */
@@ -60,6 +53,10 @@
   font-weight: 800;
   color: var(--text);
   margin-bottom: 28px;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .form-group {
@@ -79,7 +76,7 @@
 
 .form-group input,
 .form-group textarea {
-  background: var(--bg);
+  background: rgba(21, 31, 47, 0.3);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   padding: 12px 16px;
@@ -87,8 +84,9 @@
   font-size: 14px;
   color: var(--text);
   resize: vertical;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   outline: none;
+  backdrop-filter: blur(10px);
 }
 
 .form-group input::placeholder,
@@ -99,7 +97,8 @@
 .form-group input:focus,
 .form-group textarea:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.1);
+  background: rgba(21, 31, 47, 0.6);
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.15);
 }
 
 @media (max-width: 900px) {

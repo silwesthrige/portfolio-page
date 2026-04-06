@@ -2,16 +2,17 @@
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 100;
-  padding: 20px 0;
+  padding: 18px 0;
   transition: all 0.3s ease;
 }
 
 .navbar.scrolled {
-  background: rgba(8, 11, 20, 0.85);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(10, 14, 26, 0.75);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
   border-bottom: 1px solid var(--border);
-  padding: 14px 0;
+  padding: 12px 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
 }
 
 .navbar-inner {
@@ -22,17 +23,33 @@
 
 .navbar-logo {
   font-family: var(--font-display);
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 800;
   color: var(--text);
   display: flex;
   align-items: center;
   gap: 2px;
   letter-spacing: -0.02em;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.navbar-logo:hover {
+  transform: translateY(-2px);
 }
 
 .logo-bracket {
   color: var(--accent);
+  transition: all 0.3s ease;
+}
+
+.navbar-logo:hover .logo-bracket {
+  color: #7dd3fc;
+  filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.6));
 }
 
 .navbar-links {
@@ -47,17 +64,42 @@
   font-weight: 600;
   letter-spacing: 0.04em;
   color: var(--text2);
-  transition: color 0.2s;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-transform: uppercase;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.navbar-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 1px;
 }
 
 .navbar-links a:hover {
   color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
 }
 
 .nav-cta {
   padding: 10px 22px !important;
   font-size: 12px !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.nav-cta:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 0 32px rgba(56, 189, 248, 0.4) !important;
 }
 
 .hamburger {
@@ -68,6 +110,11 @@
   border: none;
   cursor: pointer;
   padding: 4px;
+  transition: all 0.3s ease;
+}
+
+.hamburger:hover {
+  transform: scale(1.1);
 }
 
 .hamburger span {
@@ -76,7 +123,7 @@
   height: 2px;
   background: var(--text);
   border-radius: 2px;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media (max-width: 768px) {

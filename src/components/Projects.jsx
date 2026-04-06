@@ -9,11 +9,8 @@ const projects = [
     tags: ['Flutter', 'PHP', 'Firebase', 'Dart'],
     role: 'Lead Developer',
     highlights: ['System design & architecture', 'UI/UX across 3 platforms', 'Database integration', 'Multi-role app management'],
-    links: [
-      { label: 'Customer App', href: '#' },
-      { label: 'Driver App', href: '#' },
-      { label: 'Admin Website', href: '#' },
-    ],
+    github: 'https://github.com/silwesthrige/tumeric-cuisine',
+    linkedin: 'https://www.linkedin.com/in/vishwa-roshel-288015320',
     accent: 'accent',
     featured: true,
   },
@@ -25,7 +22,8 @@ const projects = [
     tags: ['React', 'Spring Boot', 'JWT', 'MySQL'],
     role: 'Full-Stack Developer',
     highlights: ['Requirement analysis & design', 'React + Spring Boot integration', 'JWT authentication', 'REST API development'],
-    links: [],
+    github: 'https://github.com/silwesthrige/petshop-system',
+    linkedin: 'https://www.linkedin.com/in/vishwa-roshel-288015320',
     accent: 'purple',
     featured: false,
   },
@@ -37,7 +35,8 @@ const projects = [
     tags: ['C#', '.NET', 'SQL Server'],
     role: 'Developer',
     highlights: ['UI design & implementation', 'Core logic development', 'Database integration', 'Billing automation'],
-    links: [],
+    github: 'https://github.com/silwesthrige/hotel-management',
+    linkedin: 'https://www.linkedin.com/in/vishwa-roshel-288015320',
     accent: 'green',
     featured: false,
   },
@@ -50,7 +49,8 @@ const projects = [
     role: 'Developer',
     highlights: ['Obstacle detection (ultrasonic)', '4-servo robotic arm', 'ESP32-CAM vision', 'Mobile remote control (Blynk)'],
     badge: '🏆 1st Place – University Competition',
-    links: [],
+    github: 'https://github.com/silwesthrige/assistive-robot',
+    linkedin: 'https://www.linkedin.com/in/vishwa-roshel-288015320',
     accent: 'accent',
     featured: false,
   },
@@ -109,15 +109,18 @@ export default function Projects() {
                     {p.tags.map(t => <span key={t} className="tech-tag">{t}</span>)}
                   </div>
 
-                  {p.links.length > 0 && (
-                    <div className="project-links">
-                      {p.links.map(l => (
-                        <a key={l.label} href={l.href} className="project-link">
-                          {l.label} →
-                        </a>
-                      ))}
-                    </div>
-                  )}
+                  <div className="project-socials">
+                    {p.github && (
+                      <a href={p.github} target="_blank" rel="noopener noreferrer" className="social-link github-link" title="View on GitHub">
+                        <span className="social-icon">GitHub</span>
+                      </a>
+                    )}
+                    {p.linkedin && (
+                      <a href={p.linkedin} target="_blank" rel="noopener noreferrer" className="social-link linkedin-link" title="View LinkedIn Post">
+                        <span className="social-icon">LinkedIn</span>
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
