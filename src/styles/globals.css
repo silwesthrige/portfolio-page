@@ -100,7 +100,7 @@ section {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--accent);
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 }
 
 .section-label::before {
