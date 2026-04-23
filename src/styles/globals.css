@@ -106,8 +106,8 @@ section {
 .section-label::before {
   content: '';
   display: block;
-  width: 24px;
-  height: 2px;
+  width: 22px;
+  height: 3px;
   background: var(--accent);
   border-radius: 2px;
 }
