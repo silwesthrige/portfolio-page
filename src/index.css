@@ -57,7 +57,7 @@ body {
 #root {
   width: 1135px;
   max-width: 100%;
-  margin: 0 auto;
+  margin: 1 auto;
   text-align: center;
   border-inline: 1px solid var(--border);
   min-height: 100svh;
